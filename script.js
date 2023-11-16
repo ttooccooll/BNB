@@ -112,12 +112,6 @@ function playAudioNom() {
     audioNom.play();
 }
 
-var audioClose = new Audio("./public/put-away-book.mp3");
-
-function playAudioClose() {
-    audioClose.play();
-}
-
 function playSad() {
     var audio = document.getElementById("sadMusic");
     audio.play();
@@ -199,10 +193,7 @@ function gameOverModal(score) {
 }
 
 function closeModal() {
-    playAudioClose();
-    setTimeout(function() {
         window.location.reload(true);
-    }, 300);
 }
 
 function updateScore() {
