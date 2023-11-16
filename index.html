@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="everything">
+    <meta charset="UTF-8">
+    <title>Bitcoin's Night on Broadway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="everything">
+    <div class="game" id="thisisit">
+        <div id="character" class="normal"></div>
+        <div id="block"></div>
+        <div id="saxy"></div>
+        <div id="lizzy"></div>
+        <div id="pigeon"></div>
+    </div>
+    <h1>Help Bitcoin get to Bitcoin Park on a tragic Uberless night in Nashville.</h1>
+    <p>Press the spacebar to jump. Hit Enter to LEAP!</p>
+    <p>Score: <span id="scoreSpan"></span></p>
+</body>
+    <script src="script.js"></script>
+    <div id="audio-controls-container">
+        Go Bitcoin Go!
+        <audio id="backgroundMusic" autoplay>
+            <source src="./public/z I Haven't Heard It Yet.wav" type="audio/wav">
+        </audio>
+        <audio id="sadMusic" autoplay>
+            <source src="./public/Arpy.wav" type="audio/wav">
+        </audio>
+    </div>
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p id="modalText"></p>
+        </div>
+    </div>
+    <div id="gameStartModal" class="modal" style="display: block;">
+        <div class="modal-content">
+            <h1>Help Bitcoin get to Bitcoin Park on a tragic Uberless night in Nashville.</h1>
+            <p>Press the spacebar to jump. Hit Enter to LEAP!</p>
+            <button id="startGameButton">Click here or press the letter b.</button>
+        </div>
+    </div>    
+    <div id="gameWinModal" class="modal">
+        <div class="modal-content1">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p id="modalText"></p>
+        </div>
+    </div>
+</html>

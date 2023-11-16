@@ -1,0 +1,340 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+#thisisit {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.game{
+    width: 900px;
+    height: 500px;
+    border: 10px solid black;
+    margin: auto;
+    position: relative;
+    background-image: url('./public/Broadway2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: scrollBackground 60s linear infinite;
+}
+
+@keyframes scrollBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+#character{
+    width: 180px;
+    height: 180px;
+    background-image: url('./public/grumpy.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:relative;
+    align-self: end;
+    top: 325px;
+    left: 25px;
+}
+#character.normal {
+    animation: walk .4s infinite;
+}
+
+@keyframes walk {
+    0% {
+        background-image: url('./public/grumpy.png');
+    }
+    50% {
+        background-image: url('./public/grumpy3.png');
+    }
+    100% {
+        background-image: url('./public/grumpy2.png');
+    }
+}
+
+.animate {
+    animation: jump .9s linear;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./public/super.png');
+}
+#character.animate {
+    background-image: url('./public/super.png');
+}
+
+@keyframes jump {
+    0% {top: 325px; left: 70px;}
+    10% {top: 275px; left: 70px;}
+    20% {top: 175px; left: 65px;}
+    30% {top: 125px; left: 60px;}
+    40% {top: 90px; left: 55px;}
+    50% {top: 75px; left: 50px;}
+    60% {top: 90px; left: 45px;}
+    70% {top: 125px; left: 40px;}
+    80% {top: 175px; left: 35px;}
+    90% {top: 275px; left: 30px;}
+    100% {top: 325px; left: 25px;}
+}
+
+.animater {
+    animation: leap 2.2s linear;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./public/super.png');
+}
+#character.animater {
+    background-image: url('./public/super.png');
+}
+
+@keyframes leap {
+    0% {top: 325px; left: 70px;}
+    5% {top: 225px; left: 70px;}
+    10% {top: 125px; left: 65px;}
+    15% {top: 100px; left: 60px;}
+    30% {top: 80px; left: 55px;}
+    50% {top: 75px; left: 50px;}
+    60% {top: 90px; left: 45px;}
+    70% {top: 125px; left: 40px;}
+    80% {top: 175px; left: 35px;}
+    90% {top: 275px; left: 30px;}
+    100% {top: 325px; left: 25px;}
+}
+
+#block {
+    background-image: url('./public/Bachelorettes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 175px;
+    height: 175px;
+    position: relative;
+    top: 155px;
+    left: 940px;
+    animation: block 3s infinite linear;
+
+}
+
+@keyframes block {
+    0% { left: 990px }
+    100% { left: -400px }
+}
+
+#saxy {
+    background-image: url('./public/SAXMAN.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 175px;
+    height: 175px;
+    position: relative;
+    left: 940px;
+    animation: saxy 7.5s infinite linear;
+    margin-top: -30px;
+}
+
+@keyframes saxy {
+    0% { left: 3940px }
+    100% { left: -200px }
+}
+
+#lizzy {
+    background-image: url('./public/Warren.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 125px;
+    position: relative;
+    left: 1940px;
+    animation: fire .5s infinite linear, lizzy 20.5s infinite linear;
+    margin-top: -500px;
+    border-radius: 1000px;
+}
+
+@keyframes lizzy {
+    0% { left: 3940px }
+    100% { left: -200px }
+}
+
+@keyframes fire {
+    0% {
+      box-shadow: 0 0 15px 2px #ff1100, 0 0 50px 10px #ff5500, inset 0 0 8px 4px #b61509, inset 0 0 20px 10px #ff9900;
+      background-color: #000000;
+    }
+    50% {
+      box-shadow: 0 0 27px 5px #b61509, 0 0 70px 20px #ff9900, inset 0 0 7px 5px #b61509, inset 0 0 40px 20px #ff9900;
+      background-color: #000000;
+    }
+    100% {
+      box-shadow: 0 0 15px 2px #ff1100, 0 0 50px 10px #ff5500, inset 0 0 8px 4px #b61509, inset 0 0 20px 10px #ff9900;
+      background-color: #000000;
+    }
+  }
+
+p{
+    text-align: center;
+    margin-top:10px;
+    font-size: large;
+    background-color: black;
+    color: orange;
+}
+h1{
+    text-align: center;
+    margin-top:10px;
+    background-color: black;
+    color: darkorange;
+}
+
+#audio-controls-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: darkorange;
+    padding: 10px;
+    text-align: center;
+    border: solid black 10px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#everything {
+    background-color: orange
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: rgb(0, 0, 0);
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 95%;
+    height: 95%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .close {
+    position: fixed;
+    color: darkorange;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#modalText {
+    font-size: 50px;
+    padding: 20%
+  }
+  
+  .space {
+    animation: spaceAnimation 3.5s linear;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./public/UFO.png');
+  }
+  #character.space {
+    background-image: url('./public/UFO.png');
+}
+
+  @keyframes spaceAnimation {
+    0% {top: 120px; left: 70px;}
+    10% {top: 150px; left: 200px;}
+    20% {top: 175px; left: 500px;}
+    40% {top: 150px; left: 300px;}
+    60% {top: 175px; left: 200px;}
+    80% {top: 150px; left: 100px;}
+    100% {top: 325px; left: 60px;}
+  }
+
+  
+  #pigeon {
+    background-image: url('./public/PIGEON.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 940px;
+    animation: pigeon 23.9s infinite linear;
+    border-radius: 1000px;
+}
+
+@keyframes pigeon {
+    0% { left: 19940px }
+    100% { left: -200px }
+}
+
+#startGameButton {
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    width: 500px;
+    height: 200px;
+    margin: 10%;
+    animation: fire 2s infinite linear;
+    background: black;
+    color: darkorange;
+    border: #b61509;
+}
+
+#startGameButton:hover {
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    width: 725px;
+    height: 225px;
+    margin: 10%;
+    animation: fire .1s infinite linear;
+    cursor: crosshair;
+    rotate: 10deg;
+    font-size: x-large;
+    text-shadow: 20px 15px 4px yellow, -12px -20px 4px red;
+}
+
+.modal-content1 {
+    background-image: url('./public/beach.png');
+    background: contain;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 95%;
+    height: 95%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+  }
