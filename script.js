@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function startGame() {
+    stopSad()
     playAudio();
     playAudioLizzy()
     resumeAnimations();
